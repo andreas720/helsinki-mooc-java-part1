@@ -1,3 +1,5 @@
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Random;
 
 public class PasswordRandomizer {
@@ -13,11 +15,16 @@ public class PasswordRandomizer {
 
     public String createPassword() {
         // write code that returns a randomized password
-        int count = 0;
-        while (count <= this.length) {
-            int ran = random.nextInt(24);
-            char symbol = "abcdefghijklmnopqrstuvwxyz".charAt(number);
-        }
-        return "";
+
+        this.password = "";
+
+        for (int i = 0; i < this.length; i++) {
+                int number = this.random.nextInt(25);
+                char symbol = "abcdefghijklmnopqrstuvwxyz".charAt(number);
+                this.password += symbol;
+
+            }
+
+        return this.password;
     }
 }
